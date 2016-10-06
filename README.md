@@ -1,24 +1,17 @@
-# README
+# XiaoMao Interview Test
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> RESTful api, models: Student, Teacher, Course.
 
-Things you may want to cover:
+* Installation  
+Download the file  
+run `bundle install`  
+run `rails db:seed`  
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Usage  
+Available api.  
+GET student information as well as his teacher and course information.  
+`curl -i -X GET http://localhost:3000/api/v1/students/1.json`  
+GET all teachers information  
+`curl -i -X GET http://localhost:3000/api/v1/teachers.json`  
+DELETE a teachers and courses associated  
+`curl -i -X DELETE http://localhost:3000/api/v1/teachers/1.json`
