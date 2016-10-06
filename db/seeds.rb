@@ -53,3 +53,5 @@ Course.find_each do |course|
   course.students << Student.all.sample(MULTIPLIER / 3)
 end
 puts "Student courses seeded"
+
+puts "Done!"
