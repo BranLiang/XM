@@ -43,13 +43,13 @@ end
 puts "Courses seeded"
 
 puts "Seeding teacher_students..."
-Teacher.find_each do |teacher|
+Teacher.all.each do |teacher|
   teacher.students << Student.all.sample(MULTIPLIER / 3)
 end
 puts "Teachers students seeded"
 
 puts "Sedding Student_courses..."
-Course.find_each do |course|
+Course.all.each do |course|
   course.students << Student.all.sample(MULTIPLIER / 3)
 end
 puts "Student courses seeded"
