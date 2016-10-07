@@ -5,7 +5,8 @@
 ## Installation  
 * Download the file  
 * `bundle install`  
-* `rails db:seed`  
+* `rails db:setup`  
+* `rails s`  
 
 ## Usage  
 * GET student information as well as his teacher and course information.  
