@@ -8,13 +8,11 @@ class TeachersController < ApplicationController
 
   def destroy
     @teacher = Teacher.find_by_id(params[:id])
-    if @teacher.destroy
-      respond_to do |format|
+    respond_to do |format|
+      if @teacher&.destroy
         format.json { head :no_content, status: 200 }
-      end
-    else
-      respond_to do |format|
-        format.json { render json: {:errors => @teacher.errors.full_messages}, status: :unprocessable_entity }
+      else
+        format.json { render json: {:errors => 'Not Found'}, status: :unprocessable_entity }
       end
     end
   end
